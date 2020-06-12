@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style>
+			body {
+				background: #ffffff;
+			}
+		</style>
+ 	</head>
+ 	<body >
+		<div>До конца учебного года осталось:</div>
+		<div id="clock"></div>
+		<div>Введите длину строки произведений, чотбы поменялся шрифт названия страны (например 10) </div>
+		<input list="cocktail"	value="0" type="text" id="text" onclick="this.value"></input>
+		<datalist id="cocktail"> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> <option>6</option> <option>7</option> <option>8</option> <option>9</option> <option>10</option> </datalist> 
+		<input  value="Button" 
+				type="button"
+				onclick="obj2.changeCountries(document.getElementById('text').value);	
+						 obj1.outContries.call(obj2,about); 
+						 // если написать так, то никаких изменений не будет, т.к. мы не меням countries 
+						 setTimeout('obj1.outContries.call(obj1,about)',5000); "
+		>
+		<div>Через 5 секунд всё должо поменялся обратно, т.к. вызывается функция с параметром obj1</div>
+		<div id="tabl"></div>
+        <script src = "js/countries.js"></script>
+        <script src = "js/func.js"></script>
+		<script src = "js/time.js"></script>
+	</body>
+</html>
